@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Se connecter</title>
+</head>
+<body>
+    <form action="/accueil_connec" method="POST">
+        Nom : <input type="text" name="nom"></br>
+        Mot de passe : <input type="password" name="mdp"><br>
+        {% if erreur == True%}
+        <p style="color:red"> Pseudo ou mot de passe incorrect </p>
+        {%endif%}
+        <input type="submit" value="Valider"><br>
+    <a href="/">Retour</a> 
+</body>
+</html>

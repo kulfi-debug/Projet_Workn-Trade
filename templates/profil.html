@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+</head>
+<body>
+    Utilisateur : {{name}} <br>
+    Mot de passe : {{mdp}} <br>
+    {% for u in dem %}
+    {% if u[pseudo] == name %}
+    <fieldset>
+        {{u.matiere}}<br>
+        <fieldset>
+          <legend>Commentaire :</legend>
+        {{u.commentaire}} <br>
+      </fieldset> <br>
+      <fieldset>
+        <legend>Prix :</legend>
+      {{u.prix}} €
+      </fieldset>
+      {{u.pseudo}}<br>
+    </fieldset> <br>
+    {% endif %}
+    {% endfor %}
+<fieldset>
+    <legend>Succès obtenue:</legend>
+</fieldset>
+<img src="img/professeur.png" alt="Professeur : Plus de 5 aides" width="500" height="600">
+
+<a href="/accueil">Retour</a>
+</body>
+</html>
